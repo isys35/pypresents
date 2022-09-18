@@ -40,197 +40,201 @@
             <section>
                 <section>
                     <h8>Модуль 1. Синтаксис Python и основные инструменты разработки</h8>
-                    <h3 style="padding-top: 30px;">Занятие 1. Введение в Python.</h3>
+                    <h3 style="padding-top: 30px;">Занятие 2. Переменные. Типы данных. Операторы.</h3>
                 </section>
                 <section>
                     <h6>План занятия</h6>
                     <ul>
-                        <li><a href="#/introduction">Введение в язык программирования Python.</a></li>
-                        <li><a href="#/ide">Выбор среды разработки (IDE).</a></li>
-                        <li><a href="#/pip">Работа с pip.</a></li>
-                        <li><a href="#/poetry">Работа с виртуальными окружениями (venv, virtualenv, poetry).</a></li>
-                        <li><a href="#/structure">Структура кода и форматирование.</a></li>
-                        <li><a href="#/pep">PEP8, PEP20.</a></li>
+                        <li><a href="#/variables">Переменные.</a></li>
+                        <li><a href="#/input">Функции ввода-вывода.</a></li>
+                        <li><a href="#/types">Типы данных в Python (изменяемые и неизменяемые).</a></li>
+                        <li><a href="#/dynamyc">Динамическая типизация в Python (строгая динамическая типизация).</a>
+                        </li>
+                        <li><a href="#/simpletypes">Простейшие типы данных (NoneType, bool, int, float).</a></li>
+                        <li><a href="#/operators">Операторы.</a></li>
+                        <li><a href="#/rateoperator">Приоритет операторов.</a></li>
                     </ul>
                 </section>
             </section>
-            <section id="introduction">
+            <section id="variables">
                 <section>
-                    <p>Python - интерпретируемый язык программирования со строгой динамической типизацией.</p>
-                    <div style="background-color: white;">
-                        <img src="images/interoritator.svg" alt="">
-                    </div>
-                </section>
-                <section>
-                    <p>3 основных сферы использования языка:</p>
-                    <ul>
-                        <li>Веб-разработка</li>
-                        <li>Машинное обучение</li>
-                        <li>Автоматизация процессов</li>
-                    </ul>
-
-                </section>
-            </section>
-            <section>
-                <section id="ide">
-                    <p>IDE (Integrated Development Environment)</b> – это интегрированная, единая среда разработки, которая используется разработчиками для создания различного программного обеспечения.</p>
-                </section>
-                <section>
-                    <p>Популярные IDE для Python:</p>
-                    <ul class="ide-list">
-                        <li><span style="color: green"><b>PyCharm</b></span><img src="images/pycharm.svg" alt="" width="40"></li>
-                        <li><span>Visual Studio Code</span><img src="images/vscode.svg" alt="" width="40"></li>
-                        <li><span>Sublime Text</span><img src="images/sublime.png" alt="" width="40"></li>
-                    </ul>
-                </section>
-            </section>
-            <section>
-                <section id="pip">
-                    <p><b>pip (Package Installer for Python)</b>- система управления пакетами, которая используется для установки и управления программными пакетами, написанными на Python.</p>
-                    <pre><code data-trim  data-line-numbers="|1|2|3|">
-                        pip install requests # установка пакета
-                        pip list # список пакетов
-                        pip uninstall requests # удаление пакета
-                    </code>
-                    </pre>
-                </section>
-            </section>
-            <section>
-                <section>
-                    <p>Интерактивная оболочка Python (Python Shell).</p>
-                    <img src="images/sell.png" alt="">
-                </section>
-            </section>
-            <section>
-                <section id="poetry">
-                    <p>Виртуальное окружение в Python — способ изолировать зависимости (пакеты) для определённого проекта.
-                    </p>
-                </section>
-                <section>
-                    <p>Создание виртуального окружения с помощью <b>venv</b></p>
-                    <pre><code data-trim  data-line-numbers="|1|2|3|4|">
-                        mkdir lesson1
-                        cd project
-                        python -m venv venv
-                        venv\Scripts\activate.bat 
+                    <pre><code class="python" data-trim>
+                        age = 16
                     </code></pre>
-                    <p class="fragment-description" data-fragment-code="1">Создаём папку</p>
-                    <p class="fragment-description" data-fragment-code="2">Переходим в созданную папку</p>
-                    <p class="fragment-description" data-fragment-code="3">Создайм виртуальное окружение c названием venv
-                    </p>
-                    <p class="fragment-description" data-fragment-code="4">Активация виртуального окружения</p>
                 </section>
                 <section>
-                    <img src="images/venv.png" alt="" width="800">
-                    <p>Обозначение на скриншоте сверху говорит о том, что виртуальное окружение активировано.</p>
+                    <pre><code class="python" data-trim>
+                        age, name = 18, "Виктор"
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                <section id="input">
+                    <pre><code data-trim data-line-numbers="|1-2|3-5|">
+                        >>> print(age)
+                        18
+                        >>> input()
+                        Да!
+                        'Да!'
+                    </code></pre>
                 </section>
                 <section>
-                    <p>Работа с poetry</p>
-                    <p>Установка:</p>
+                    <pre>print(value, ..., sep='', end='\n', file=sys.stdout, flush=False)</pre>
+                    <pre><code data-trim class="python" data-line-numbers="|1|2|3|4|">
+                        print('туториал', 'по', 'функции', 'print()')
+                        print('туториал', 'по', 'функции', 'print()', sep='\n') 
+                        print('туториал', 'по', 'функции', 'print()', sep=',')
+                        print('туториал', 'по', 'функции', 'print()', end='!\n')
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="|1|3|5|">
+                        test_text = input ("Введите число: ")
+
+                        test_number = int(test_text)
+
+                        print("Введенное число: ", test_number)
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                <section id="types">
+                    <h2>Изменяемые</h2>
+                    <ul>
+                        <li>Списки (list)</li>
+                        <li>Множества (set)</li>
+                        <li>Словари (dict)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Неизменяемые</h2>
+                    <ul>
+                        <li>Числа (int)</li>
+                        <li>Числа с плавающей точкой (float)</li>
+                        <li>Комплексные числа (complex)</li>
+                        <li>Логические переменные (bool)</li>
+                        <li>Кортежи (tuple)</li>
+                        <li>Строки (str)</li>
+                        <li>Неизменяемые множества (frozenset)</li>
+                    </ul>
+                </section>
+                <section>
+                    <pre><code data-trim data-line-numbers="|1-2|3-6|7|8-9|">
+                        >>> a = 4
+                        >>> b = 5
+                        >>> id(a)
+                        1829984576
+                        >>> id(b)
+                        1829984592
+                        >>> a = b
+                        >>> id(a)
+                        1829984592
+                    </code></pre>
+                </section>
+                <section>
+                    <img src="images/tpython-lesson3-1-1.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim data-line-numbers="|1-3|5-12|">
+                        >>> k = 15
+                        >>> id(k)
+                        1672501744
+
+                        >>> a = [1, 2]
+                        >>> id(a)
+                        47997336
+                        >>> a[1] = 3
+                        >>> a
+                        [1, 3]
+                        >>> id(a)
+                        47997336
+                    </code></pre>
+                </section>
+                <section>
+                    <img src="images/python-lesson3-2-1.png" alt="">
+                </section>
+            </section>
+            <section>
+                <section id="dynamyc">
+                    <p>Динамическая типизация</p>
                     <pre><code data-trim>
-                        pip install poetry
+                        >>> a = 10
+                        >>> a = "hello"
+                        >>> a = (1, 2)
+                        >>> type(a)
+                        tuple
                     </code></pre>
-                    <p>Основные комманды:</p>
+                </section>
+                <section id="dynamyc">
+                    <p>Строгая типизация</p>
                     <pre><code data-trim>
-                        poetry new poetry-demo # Создание проекта poetry-demo
-                        poetry init # Создание в уже существующем проекте
-                        poetry shell # Активация виртуальной среды
-                        deactivate # Деактивация виртуальной среды
-                    </code></pre>
-                </section>
-                <section>
-                    <p>Работа с зависимостями в poetry:</p>
-                    <pre><code data-trim>
-                        poetry add requests # установка библиотеки
-                        poetry install # для установики зависимостей проекта
-                        poetry update # для обновления версий зависимостей
-                        poetry show # просмотр зависимостей проекта
-                    </code></pre>
-                </section>
-                <section>
-                    <p>Создание виртуальных окружений с помощью PyCharm</p>
-                    <img src="Images/pycharmpoetry.png" alt="" width="600">
-                </section>
-            </section>
-            <section>
-                <section id="structure">
-                    <p>Стили наименований</p>
-                    <p>Функции</p>
-                    <pre><code class="python" data-trim>
-                            def function():
-                                pass
-                                    
-                            def my_function():
-                                pass
-                        </code></pre>
-                </section>
-                <section>
-                    <p>Переменные</p>
-                    <pre><code class="python" data-trim>
-                        var = 16
-                        my_variable = "variable"
-                    </code></pre>
-                    <p>Классы</p>
-                    <pre><code class="python" data-trim>
-                        class Model:
-                            pass
-                        
-
-                        class MyClass:
-                            pass
-                    </code></pre>
-                </section>
-                <section>
-                    <p>Методы</p>
-                    <pre><code class="python" data-trim>
-                        class Model:
-
-                            def class_method(self):
-                                pass
-
-                            def method(self, name):
-                                pass
-                    </code></pre>
-                    <p>Константы</p>
-                    <pre><code class="python" data-trim>
-                        CONSTANT = 16
-                        MY_CONSTANT = 16
-                        MY_LONG_CONSTANT = "ghfdeqq:432"
+                        >>> a = 10
+                        >>> b = "hello"
+                        >>> a + b 
+                        TypeError
                     </code></pre>
                 </section>
             </section>
             <section>
-                <section id="pep">
-                    <p>Философия python. PEP20</p>
-                    <ul>
-                        <li class="fragment">Красивое лучше, чем уродливое.</li>
-                        <li class="fragment">Явное лучше, чем неявное.</li>
-                        <li class="fragment">Простое лучше, чем сложное.</li>
-                        <li class="fragment">Сложное лучше, чем запутанное.</li>
-                        <li class="fragment">Плоское лучше, чем вложенное.</li>
-                        <li class="fragment">Разреженное лучше, чем плотное.</li>
-                        <li class="fragment">Читаемость имеет значение.</li>
-                        <li class="fragment">Особые случаи не настолько особые, чтобы нарушать правила.</li>
-                        <li class="fragment">При этом практичность важнее безупречности.</li>
-                    </ul>
+                <section id="simpletypes">
+                    <pre><code data-trim>
+                        >>> type(None)
+                        NoneType
+                    </code></pre>
                 </section>
                 <section>
-                    <ul>
-                        <li class="fragment">Ошибки никогда не должны замалчиваться.</li>
-                        <li class="fragment">Если они не замалчиваются явно</li>
-                        <li class="fragment">Встретив двусмысленность, отбрось искушение угадать.</li>
-                        <li class="fragment">Должен существовать один и, желательно, только один очевидный способ сделать это.</li>
-                        <li class="fragment">Хотя он поначалу может быть и не очевиден, если вы не голландец [^1].</li>
-                    </ul>
+                    <pre><code data-trim>
+                        >>> my_bool_true = True
+                        >>> bool(10)
+                        True
+                        >>> bool(0)
+                        False
+                        >>> bool('some')
+                        True
+                        >>> bool('')
+                        False
+                    </code></pre>
                 </section>
                 <section>
+                    <pre><code data-trim>
+                        >>> age = 18
+                    </code></pre>
+                    <pre><code data-trim>
+                        >>> a = "25"
+                        >>> int_a = int(a)
+                        >>> type(int_a)
+                        int
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim>
+                        >>> var = 0.001
+                        >>> type(var)
+                        float
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                <section id="operators">
+                    <p>Операторы Python бывают 7 типов:</p>
                     <ul>
-                        <li class="fragment">Сейчас лучше, чем никогда.</li>
-                        <li class="fragment">Хотя никогда зачастую лучше, чем прямо сейчас.</li>
-                        <li class="fragment">Если реализацию сложно объяснить — идея плоха.</li>
-                        <li class="fragment">Если реализацию легко объяснить — идея, возможно, хороша.</li>
-                        <li class="fragment">Пространства имён — отличная штука! Будем делать их больше!</li>
+                        <li>Арифметические операторы</li>
+                        <li>Операторы сравнения</li>
+                        <li>Операторы присваивания</li>
+                        <li>Логические операторы</li>
+                        <li>Операторы принадлежности</li>
+                        <li>Операторы тождественности</li>
+                        <li>Битовые операторы</li>
                     </ul>
+                </section>
+            </section>
+            <section>
+                <section id="rateoperator">
+                    <p>Приоритет операторов</p>
+                    <pre><code data-trim>
+                        5 + 4 * 3
+                        (5 + 4) * 3
+                    </code></pre>
                 </section>
             </section>
         </div>
