@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .ide-list span {
+            margin-right: 10px;
+        }
+        
+        .ide-list img {
+            width: 60px;
+        }
+        
+        .ide-list li * {
+            vertical-align: middle;
+        }
+        
+        .fragment-description {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h8>Модуль 1. Синтаксис Python и основные инструменты разработки</h8>
+                    <h3 style="padding-top: 30px;">Занятие 1. Введение в Python.</h3>
+                </section>
+                <section>
+                    <h6>План занятия</h6>
+                    <ul>
+                        <li><a href="#/introduction">Введение в язык программирования Python.</a></li>
+                        <li><a href="#/ide">Выбор среды разработки (IDE).</a></li>
+                        <li><a href="#/pip">Работа с pip.</a></li>
+                        <li><a href="#/poetry">Работа с виртуальными окружениями (venv, virtualenv, poetry).</a></li>
+                        <li><a href="#/structure">Структура кода и форматирование.</a></li>
+                        <li><a href="#/pep">PEP8, PEP20.</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="introduction">
+                <section>
+                    <p>Python - интерпретируемый язык программирования со строгой динамической типизацией.</p>
+                    <div style="background-color: white;">
+                        <img src="images/interoritator.svg" alt="">
+                    </div>
+                </section>
+                <section>
+                    <p>3 основных сферы использования языка:</p>
+                    <ul>
+                        <li>Веб-разработка</li>
+                        <li>Машинное обучение</li>
+                        <li>Автоматизация процессов</li>
+                    </ul>
+
+                </section>
+            </section>
+            <section>
+                <section id="ide">
+                    <p>IDE (Integrated Development Environment)</b> – это интегрированная, единая среда разработки, которая используется разработчиками для создания различного программного обеспечения.</p>
+                </section>
+                <section>
+                    <p>Популярные IDE для Python:</p>
+                    <ul class="ide-list">
+                        <li><span style="color: green"><b>PyCharm</b></span><img src="images/pycharm.svg" alt="" width="40"></li>
+                        <li><span>Visual Studio Code</span><img src="images/vscode.svg" alt="" width="40"></li>
+                        <li><span>Sublime Text</span><img src="images/sublime.png" alt="" width="40"></li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section id="pip">
+                    <p><b>pip (Package Installer for Python)</b>- система управления пакетами, которая используется для установки и управления программными пакетами, написанными на Python.</p>
+                    <pre><code data-trim  data-line-numbers="|1|2|3|">
+                        pip install requests # установка пакета
+                        pip list # список пакетов
+                        pip uninstall requests # удаление пакета
+                    </code>
+                    </pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <p>Интерактивная оболочка Python (Python Shell).</p>
+                    <img src="images/sell.png" alt="">
+                </section>
+            </section>
+            <section>
+                <section id="poetry">
+                    <p>Виртуальное окружение в Python — способ изолировать зависимости (пакеты) для определённого проекта.
+                    </p>
+                </section>
+                <section>
+                    <p>Создание виртуального окружения с помощью <b>venv</b></p>
+                    <pre><code data-trim  data-line-numbers="|1|2|3|4|">
+                        mkdir lesson1
+                        cd project
+                        python -m venv venv
+                        venv\Scripts\activate.bat 
+                    </code></pre>
+                    <p class="fragment-description" data-fragment-code="1">Создаём папку</p>
+                    <p class="fragment-description" data-fragment-code="2">Переходим в созданную папку</p>
+                    <p class="fragment-description" data-fragment-code="3">Создайм виртуальное окружение c названием venv
+                    </p>
+                    <p class="fragment-description" data-fragment-code="4">Активация виртуального окружения</p>
+                </section>
+                <section>
+                    <img src="images/venv.png" alt="" width="800">
+                    <p>Обозначение на скриншоте сверху говорит о том, что виртуальное окружение активировано.</p>
+                </section>
+                <section>
+                    <p>Работа с poetry</p>
+                    <p>Установка:</p>
+                    <pre><code data-trim>
+                        pip install poetry
+                    </code></pre>
+                    <p>Основные комманды:</p>
+                    <pre><code data-trim>
+                        poetry new poetry-demo # Создание проекта poetry-demo
+                        poetry init # Создание в уже существующем проекте
+                        poetry shell # Активация виртуальной среды
+                        deactivate # Деактивация виртуальной среды
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Работа с зависимостями в poetry:</p>
+                    <pre><code data-trim>
+                        poetry add requests # установка библиотеки
+                        poetry install # для установики зависимостей проекта
+                        poetry update # для обновления версий зависимостей
+                        poetry show # просмотр зависимостей проекта
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Создание виртуальных окружений с помощью PyCharm</p>
+                    <img src="Images/pycharmpoetry.png" alt="" width="600">
+                </section>
+            </section>
+            <section>
+                <section id="structure">
+                    <p>Стили наименований</p>
+                    <p>Функции</p>
+                    <pre><code class="python" data-trim>
+                            def function():
+                                pass
+                                    
+                            def my_function():
+                                pass
+                        </code></pre>
+                </section>
+                <section>
+                    <p>Переменные</p>
+                    <pre><code class="python" data-trim>
+                        var = 16
+                        my_variable = "variable"
+                    </code></pre>
+                    <p>Классы</p>
+                    <pre><code class="python" data-trim>
+                        class Model:
+                            pass
+                        
+
+                        class MyClass:
+                            pass
+                    </code></pre>
+                </section>
+                <section>
+                    <p>Методы</p>
+                    <pre><code class="python" data-trim>
+                        class Model:
+
+                            def class_method(self):
+                                pass
+
+                            def method(self, name):
+                                pass
+                    </code></pre>
+                    <p>Константы</p>
+                    <pre><code class="python" data-trim>
+                        CONSTANT = 16
+                        MY_CONSTANT = 16
+                        MY_LONG_CONSTANT = "ghfdeqq:432"
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                <section id="pep">
+                    <p>Философия python. PEP20</p>
+                    <ul>
+                        <li class="fragment">Красивое лучше, чем уродливое.</li>
+                        <li class="fragment">Явное лучше, чем неявное.</li>
+                        <li class="fragment">Простое лучше, чем сложное.</li>
+                        <li class="fragment">Сложное лучше, чем запутанное.</li>
+                        <li class="fragment">Плоское лучше, чем вложенное.</li>
+                        <li class="fragment">Разреженное лучше, чем плотное.</li>
+                        <li class="fragment">Читаемость имеет значение.</li>
+                        <li class="fragment">Особые случаи не настолько особые, чтобы нарушать правила.</li>
+                        <li class="fragment">При этом практичность важнее безупречности.</li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li class="fragment">Ошибки никогда не должны замалчиваться.</li>
+                        <li class="fragment">Если они не замалчиваются явно</li>
+                        <li class="fragment">Встретив двусмысленность, отбрось искушение угадать.</li>
+                        <li class="fragment">Должен существовать один и, желательно, только один очевидный способ сделать это.</li>
+                        <li class="fragment">Хотя он поначалу может быть и не очевиден, если вы не голландец [^1].</li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li class="fragment">Сейчас лучше, чем никогда.</li>
+                        <li class="fragment">Хотя никогда зачастую лучше, чем прямо сейчас.</li>
+                        <li class="fragment">Если реализацию сложно объяснить — идея плоха.</li>
+                        <li class="fragment">Если реализацию легко объяснить — идея, возможно, хороша.</li>
+                        <li class="fragment">Пространства имён — отличная штука! Будем делать их больше!</li>
+                    </ul>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/externalcode/externalcode.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+
+            hash: true,
+
+            highlight: {
+                beforeHighlight: (e) => console.log(e)
+            },
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, Externalcode, RevealHighlight, RevealNotes]
+        })
+        Reveal.on('fragmentshown', event => {
+            document.querySelectorAll(".fragment-description").forEach(el => {
+                el.setAttribute("style", "display: none");
+            })
+            let fragment = event.fragment;
+            let fragmentDescription = fragment.parentNode.parentNode.querySelector(`.fragment-description[data-fragment-code='${fragment.getAttribute("data-line-numbers")}']`);
+            if (fragmentDescription) {
+                fragmentDescription.setAttribute("style", "display: block")
+            }
+        });
+    </script>
+</body>
+
+</html>
