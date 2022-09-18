@@ -1,0 +1,93 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 768px;
+    margin: 0 auto;
+}
+
+.contents {
+    padding-top: 100px;
+    justify-content: stretch;
+    display: flex;
+}
+
+.contents__title {
+    background-color: black;
+    color: white;
+    padding: 60px 60px 100px 60px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contents__menu {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    list-style: none;
+    counter-reset: li;
+    flex-grow: 1;
+}
+
+.contents__item {
+    line-height: 1.2;
+    position: relative;
+    left: -60px;
+    margin-bottom: 30px;
+    padding-left: 70px;
+}
+
+.contents__item::before {
+    counter-increment: li;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: 700;
+    width: 60px;
+    text-align: center;
+    color: white;
+    content: counters(li, "");
+    position: absolute;
+}
+
+.contents__item.github::before {
+    counter-increment: none;
+    content: "-";
+}
+
+.contents__item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 2px;
+    background: linear-gradient(to right, white 60px, black 60px);
+}
+
+.contents__link {
+    text-decoration: none;
+    color: black;
+}
+
+.contents__link:hover {
+    color: rgb(121, 7, 7);
+}
+
+.contents__logo {
+    width: 50px;
+    margin-bottom: 30px;
+}
+
+.contents__title {}
