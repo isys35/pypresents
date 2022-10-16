@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .ide-list span {
+            margin-right: 10px;
+        }
+        
+        .ide-list img {
+            width: 60px;
+        }
+        
+        .ide-list li * {
+            vertical-align: middle;
+        }
+        
+        .fragment-description {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h8>Модуль 1. Синтаксис Python и основные инструменты разработки</h8>
+                    <h3 style="padding-top: 30px;">Занятие 3. Знакомство с системой контроля версий</h3>
+                </section>
+                <section>
+                    <h6>План занятия</h6>
+                    <ul>
+                        <li><a href="#/1">Понятие системы контроля версий (VCS). Установка Git.</a></li>
+                        <li><a href="#/2">Конфигурация репозитория</a></li>
+                        <li><a href="#/3">Состояние файлов. Игнорирование файлов с помощью .gitignore</a></li>
+                        <li><a href="#/4">Ветвление в GIT.</a></li>
+                        <li><a href="#/5">Операции отмены</a></li>
+                        <li><a href="#/6">Работа с удалёнными репозиториями.</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="1">
+                <section>
+                    <img src="images/git1.excalidraw.svg" alt="">
+                </section>
+            </section>
+            <section id="1">
+                <section>
+                    <pre><code data-trim class="git" data-line-numbers="|1|2|3|4|">
+                        git init
+                        git config --list --show-origin
+                        git config --global user.name "John Doe"
+                        git config --global user.email johndoe@example.com
+                    </code></pre>
+                </section>
+            </section>
+            <section id="3">
+                <section>
+                    <img src="images/file.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="git">
+                    git status
+                    </code></pre>
+                    <pre><code data-trim class="language-bash">
+                    On branch master
+                    Your branch is up-to-date with 'origin/master'.
+                    Untracked files:
+                        (use "git add file..." to include in what will be committed)
+
+                        README
+
+                    nothing added to commit but untracked files present (use "git add" to track)
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="git">
+                    git add README
+                    git status
+                    </code></pre>
+                    <pre><code data-trim class="bash">
+                    Your branch is up-to-date with 'origin/master'.
+                    Changes to be committed:
+                        (use "git restore --staged file..." to unstage)
+                        
+                        new file:   README
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="git">
+                    git commit
+                    </code></pre>
+                    <pre><code data-trim class="bash">
+                        # Please enter the commit message for your changes. Lines starting
+                        # with '#' will be ignored, and an empty message aborts the commit.
+                        # On branch master
+                        # Your branch is up-to-date with 'origin/master'.
+                        #
+                        # Changes to be committed:
+                        #	       new file:   README
+                        #	   
+                        #
+                        ~
+                        ~
+                        ~
+                        ".git/COMMIT_EDITMSG" 9L, 283C
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="git">
+                    git commit -m "Story 182: fix benchmarks for speed"
+                    </code></pre>
+                    <pre><code data-trim class="bash">
+                        [master 463dc4f] Story 182: fix benchmarks for speed
+                            2 files changed, 2 insertions(+)
+                            create mode 100644 README
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                    On branch master
+                    Your branch is up-to-date with 'origin/master'.
+                    Changes not staged for commit:
+                        (use "git add file..." to update what will be committed)
+                        (use "git checkout -- file..." to discard changes in working directory)
+
+                            modified:   CONTRIBUTING.md
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="git">
+                        git add README
+                        git status
+                    </code></pre>
+                    <pre><code data-trim class="bash">
+                        On branch master
+                        Your branch is up-to-date with 'origin/master'.
+                        Changes to be committed:
+                          (use "git reset HEAD file..." to unstage)
+                        
+                            modified:   README
+                    </code></pre>
+                </section>
+                <section>
+                    <p>.gitignore - для игнорирования файлов и директорий</p>
+                </section>
+            </section>
+            <section id="4">
+                <section>
+                    <img src="images/branch1b.png" alt="">
+                </section>
+                <section>
+                    <img src="images/branch2b.png" alt="">
+                </section>
+                <section>
+                    <img src="images/branch3b.png" alt="">
+                </section>
+                <section>
+                    <img src="images/branch4b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="git">
+                        git log --oneline --decorate
+                    </code></pre>
+                    <pre><code data-trim class="bash">
+                        f30ab (HEAD -> master, testing) Add feature #32
+                        34ac2 Fix bug #4212
+                        98ca9 The initial commit of my project
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="git">
+                        git checkout testing
+                    </code></pre>
+                    <img src="images/branch5b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="git">
+                        git commit -a -m 'made a change'
+                    </code></pre>
+                    <img src="images/branch6b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="git">
+                        git checkout master
+                    </code></pre>
+                    <img src="images/branch7b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="git">
+                        git commit -a -m 'made other changes'
+                    </code></pre>
+                    <img src="images/branch8b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="git">
+                        git log --oneline --decorate --graph --all
+                    </code></pre>
+                </section>
+                <section>
+                    <img src="images/merge1b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="git">
+                        git checkout -b iss53
+                    </code></pre>
+                    <img src="images/merge2b.png" alt="">
+                </section>
+                <section>
+                    <img src="images/merge3b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="git" data-line-numbers="|1|2|3|4|">
+                        git checkout master
+                        git checkout -b hotfix
+                        vim index.html
+                        git commit -a -m 'Fix broken email address'
+                    </code></pre>
+                </section>
+                <section>
+                    <img src="images/merge4b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="git" data-line-numbers="|1|2|">
+                        git checkout master
+                        git merge hotfix
+                    </code></pre>
+                </section>
+                <section>
+                    <img src="images/merge5b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="git" data-line-numbers="|1|2|3|4|">
+                        git branch -d hotfix
+                        git checkout iss53
+                        vim index.html
+                        git commit -a -m 'Finish the new footer [issue 53]'
+                    </code></pre>
+                </section>
+                <section>
+                    <img src="images/merge6b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="git" data-line-numbers="|1|2|">
+                        git checkout master
+                        git merge iss53
+                    </code></pre>
+                </section>
+                <section>
+                    <img src="images/merge24b.png" alt="">
+                </section>
+                <section>
+                    <img src="images/merge25b.png" alt="">
+                </section>
+            </section>
+            <section id="5">
+                <section>
+                    <pre><code data-trim class="git" data-line-numbers="|1|2|3|">
+                        git commit -m 'Initial commit'
+                        git add forgotten_file
+                        git commit --amend
+                    </code></pre>
+                </section>
+            </section>
+            <section id="6">
+                <section>
+                    <pre><code data-trim class="git" data-line-numbers="|1|2|3|">
+                        git clone https://github.com/schacon/ticgit
+                        cd ticgit
+                        git remote
+                    </code></pre>
+                    <pre><code data-trim class="git">
+                        git remote -v
+                    </code></pre>
+                    <pre><code data-trim class="git">
+                        git remote add pb https://github.com/paulboone/ticgit
+                        git remote -v
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="git" data-line-numbers="|1|">
+                        git fetch [remote-name]
+                    </code></pre>
+                    <pre><code data-trim class="git" data-line-numbers="|1|">
+                        git pull
+                    </code></pre>
+                    <pre><code data-trim class="git" data-line-numbers="|1|">
+                        git push origin master
+                    </code></pre>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/externalcode/externalcode.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+
+            hash: true,
+
+            highlight: {
+                beforeHighlight: (e) => console.log(e)
+            },
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, Externalcode, RevealHighlight, RevealNotes]
+        })
+        Reveal.on('fragmentshown', event => {
+            document.querySelectorAll(".fragment-description").forEach(el => {
+                el.setAttribute("style", "display: none");
+            })
+            let fragment = event.fragment;
+            let fragmentDescription = fragment.parentNode.parentNode.querySelector(`.fragment-description[data-fragment-code='${fragment.getAttribute("data-line-numbers")}']`);
+            if (fragmentDescription) {
+                fragmentDescription.setAttribute("style", "display: block")
+            }
+        });
+    </script>
+</body>
+
+</html>
