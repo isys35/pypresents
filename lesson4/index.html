@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .ide-list span {
+            margin-right: 10px;
+        }
+        
+        .ide-list img {
+            width: 60px;
+        }
+        
+        .ide-list li * {
+            vertical-align: middle;
+        }
+        
+        .fragment-description {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h8>Модуль 1. Синтаксис Python и основные инструменты разработки</h8>
+                    <h3 style="padding-top: 30px;">Занятие 4. Работа со строками. Операторы ветвления</h3>
+                </section>
+                <section>
+                    <h6>План занятия</h6>
+                    <ul>
+                        <li><a href="#/1">Работа со строками.</a></li>
+                        <li><a href="#/2">Приведение типов.</a></li>
+                        <li><a href="#/3">Оператор ветвления if.</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="1">
+                <section>
+                    <pre><code data-trim class="bash" data-line-numbers="|1-2|3-4|5-6|7-8|">
+                        >>> 'abc'    #  апострофы (одинарные кавычки)
+                        abc
+                        >>> "abc"    #  кавычки
+                        abc
+                        >>> """abc"""    #  тройные кавычки
+                        abc
+                        >>> '''abc'''    #  тройные апострофы
+                        abc
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="bash" data-line-numbers="|1-2|3-4|">
+                        >>> "O'Reilly"
+                        "O'Reilly"
+                        >>> 'Я "замечательный" программист!'
+                        'Я "замечательный" программист!'
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> s1 = 'Привет! Я \"короткая\" строка.\nТут я начинаюсь с новой строки,\n\tа тут с новой строки и отступа'
+                        >>> s1     #  вывод строки как есть
+                        'Привет! Я "короткая" строка.\nТут я начинаюсь с новой строки,\n\tа тут с новой строки и отступа'
+                        >>> print(s1)    # print интерпретирует служебные символы
+                        Привет! Я "короткая" строка.
+                        Тут я начинаюсь с новой строки,
+	                        а тут с новой строки и отступа
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> s2 = '''Привет! А я "длинная строка".
+                        ... Меня можно печатать как обычный текст.
+                        ... 
+                        ... 
+                        ... Сколько угодно используя клавиши "Enter" и
+                        ... "Tab"
+                        ...     "Tab"
+                        ...             "Tab"'''
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> r'D:\\мои документы\книги\Лутц.pdf'
+                        'D:\\\\мои документы\\книги\\Лутц.pdf'
+                    </code></pre>
+                    <pre><code data-trim class="bash">
+                        >>> print(r'D:\\мои документы\книги\Лутц.pdf')
+                        D:\\мои документы\книги\Лутц.pdf
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> s = 'Spam' 
+                        >>> len(s) # Длина
+                        4
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> s[0] # Первый элемент в s
+                        'S'
+                    </code></pre>
+                    <img src="images/1b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> s[1] # Второй элемент слева
+                        'p'
+                    </code></pre>
+                    <img src="images/2b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> s[-1] # Последний элемент в s
+                        'm'
+                    </code></pre>
+                    <img src="images/3b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> s[-2] # Второй элемент с конца
+                        'a'
+                    </code></pre>
+                    <img src="images/4b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> s[1:3] # Срез со смещения 1 до 2
+                        'pa'
+                    </code></pre>
+                    <img src="images/5b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> s[1:] # Все после первого элемента
+                        'pam'
+                    </code></pre>
+                    <img src="images/6b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> s[:-1] # Все кроме последнего элемента
+                        'Spa'
+                    </code></pre>
+                    <img src="images/7b.png" alt="">
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> S1 = 'spam'
+                        >>> S2 = 'eggs'
+                        >>> print(S1 + S2)
+                        spameggs
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> print('spam' * 3)
+                        spamspamspam
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="bash">
+                        >>> print('spam' * 3)
+                        spamspamspam
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="bash" data-line-numbers="|1|2-3|4-5|6-7|8-9|10-11|">
+                        >>> s = 'spam, spam'
+                        >>> s.split(', ')
+                        ['spam', 'spam']
+                        >>> s.isdigit()
+                        false
+                        >>> s.upper()
+                        'SPAM, SPAM'
+                        >>> s.startswith('s')
+                        True
+                        >>> s.capitalize()
+                        'Spam, spam'
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="|1-3|5-8|">
+                        first_name="Tom"
+                        text = f"Hello, {first_name}."
+                        print(text)     # Hello, Tom.
+ 
+                        name="Bob"
+                        age=23
+                        info = f"Name: {name}\t Age: {age}"
+                        print(info)     # Name: Bob  Age: 23
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="|1-2|4-5|">
+                        info = "Name: {name}\t Age: {age}".format(name="Bob", age=23)
+                        print(info)     # Name: Bob  Age: 23
+
+                        info = "Name: {0}\t Age: {1}".format("Bob", 23)
+                        print(info)     # Name: Bob  Age: 23
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="|1-2|4-5|">
+                        info = "Имя: %s \t Возраст: %d" % ("Tom", 35)
+                        print(info)   # Имя: Tom     Возраст: 35
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="python">
+                        import string
+ 
+                        print(string.ascii_letters)
+                        print(string.digits)
+                        print(string.punctuation)
+                    </code></pre>
+                    <pre><code data-trim class="python">
+                        Результат выполнения кода
+                        abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+                        0123456789
+                        !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="python">
+                        >>> 'Ёжик'.encode()
+                        b'\xd0\x81\xd0\xb6\xd0\xb8\xd0\xba'
+ 
+                        >>> 'Ёжик в тумане'.encode().decode()
+                        'Ёжик в тумане'
+ 
+                        >>> 'Ёжик в тумане'.encode().decode('utf-16')
+                        '臐뛐룐뫐퀠₲苑菑볐냐뷐뗐'
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="python">
+                        >>> S = 'spam'
+                        >>> S[0] = 'x' # Вызовет ошибку
+                    </code></pre>
+                    <pre><code data-trim class="python">
+                        >>> S = S + 'SPAM!'
+                        >>> S
+                        'spamSPAM!'
+                    </code></pre>
+                </section>
+            </section>
+            <section id="2">
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="|1-3|5|">
+                        # Преобразуем целое число в число с плавающей точкой
+                        num_int = 123
+                        num_float = 1.23
+
+                        num_new = num_int + num_float
+
+                        print("Тип данных в num_int:", type(num_int))
+                        print("Тип данных в num_float:", type(num_float))
+                        print("Значение num_new:", num_new)
+                        print("Тип данных в num_new:", type(num_new))
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code data-trim class="python" data-line-numbers="|1-3|5|">
+                        # Складываем строку и целое число с помощью явного преобразования
+                        num_int = 123
+                        num_str = "456"
+
+                        print("Тип данных в num_int:", type(num_int))
+                        print("Тип данных в num_str до явного приведения:", type(num_str))
+
+                        num_str = int(num_str)
+                        print("Тип данных в num_str после явного приведения:", type(num_str))
+
+                        num_sum = num_int + num_str
+
+                        print("Сумма num_int и num_str:", num_sum)
+                        print("Тип данных полученной суммы:", type(num_sum))
+                    </code></pre>
+                </section>
+            </section>
+            <section id="3">
+                <section>
+                    <pre><code class="python" data-code="code/example1.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example2.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example3.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example4.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example5.py"></code></pre>
+                </section>
+                <section>
+                    <img src="images/8b.png" alt="">
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example6.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example7.py"></code></pre>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/externalcode/externalcode.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+
+            hash: true,
+
+            highlight: {
+                beforeHighlight: (e) => console.log(e)
+            },
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, Externalcode, RevealHighlight, RevealNotes]
+        })
+        Reveal.on('fragmentshown', event => {
+            document.querySelectorAll(".fragment-description").forEach(el => {
+                el.setAttribute("style", "display: none");
+            })
+            let fragment = event.fragment;
+            let fragmentDescription = fragment.parentNode.parentNode.querySelector(`.fragment-description[data-fragment-code='${fragment.getAttribute("data-line-numbers")}']`);
+            if (fragmentDescription) {
+                fragmentDescription.setAttribute("style", "display: block")
+            }
+        });
+    </script>
+</body>
+
+</html>
