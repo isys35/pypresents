@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .ide-list span {
+            margin-right: 10px;
+        }
+        
+        .ide-list img {
+            width: 60px;
+        }
+        
+        .ide-list li * {
+            vertical-align: middle;
+        }
+        
+        .fragment-description {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h8>Модуль 1. Синтаксис Python и основные инструменты разработки</h8>
+                    <h3 style="padding-top: 30px;">Занятие 11. Классы.</h3>
+                </section>
+                <section>
+                    <h6>План занятия</h6>
+                    <ul>
+                        <li><a href="#/1">Введение в ООП.</a></li>
+                        <li><a href="#/2">Понятие класса. Создание класса (class).</a></li>
+                        <li><a href="#/3">Понятие объекта класса.(self)</a></li>
+                        <li><a href="#/4">Атрибуты класса</a></li>
+                        <li><a href="#/5">Методы. Статические методы и методы класса.</a></li>
+                        <li><a href="#/6">Модификаторы доступа.</a></li>
+                        <li><a href="#/7">Магические методы.</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="1">
+                <section>
+                    <p>ООП на примере "Будильника"</p>
+                </section>
+                <section>
+                    <p>Атрибуты</p>
+                    <ul>
+                        <li>current_ second</li>
+                        <li>current_minute</li>
+                        <li>current_hour</li>
+                        <li>alarm_time</li>
+                        <li>alarm_is_set</li>
+                    </ul>
+                </section>
+                <section>
+                    <p>Публичные методы</p>
+                    <ul>
+                        <li>set_time()</li>
+                        <li>set_alarm_time()</li>
+                        <li>set_alarm_on()</li>
+                        <li>set_alarm_off()</li>
+                    </ul>
+                </section>
+                <section>
+                    <p>Приватные методы</p>
+                    <ul>
+                        <li>incrernent_ current_second()</li>
+                        <li>incrernent current_minute()</li>
+                        <li>increment_current_hour()</li>
+                        <li>sound_alarm()</li>
+                    </ul>
+                </section>
+            </section>
+            <section id="2">
+                <section>
+                    <img src="images/1w.png" alt="">
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/coin.py" data-line-numbers="|1|6|11-12|19-23|28-29|11|19|28|11-12|12|19-23|28-29|"></code></pre>
+                </section>
+            </section>
+            <section id="3">
+                <section>
+                    <pre><code class="python" data-code="code/coin_demo1.py" data-line-numbers="|6-29|32-44|34|12|37|40-41|41|44|"></code></pre>
+                </section>
+            </section>
+            <section id="4">
+                <section>
+                    <pre><code class="python" data-code="code/example1.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example2.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example3.py" data-line-numbers="|8|"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example4.py" data-line-numbers="|8-11|13-15|"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example2.py" data-line-numbers="|12-15|"></code></pre>
+                </section>
+            </section>
+            <section id="5">
+                <section>
+                    <pre><code class="python" data-code="code/example5.py" data-line-numbers="|2-3|5-7|9-11|"></code></pre>
+                </section>
+            </section>
+            <section id="6">
+                <section>
+                    <pre><code class="python" data-code="code/example6.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example7.py"></code></pre>
+                </section>
+            </section>
+            <section id="7">
+                <section>
+                    <ul>
+                        <li>__new__(cls[, ...])</li>
+                        <li>__init__(self[, ...])</li>
+                        <li>__init_subclass__(cls)</li>
+                        <li>__del__(self)</li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>__repr__(self)</li>
+                    </ul>
+                    <pre><code class="python" data-code="code/example8.py"></code></pre>
+                </section>
+                <section>
+                    <ul>
+                        <li>__str__(self)</li>
+                    </ul>
+                    <pre><code class="python" data-code="code/example9.py"></code></pre>
+                </section>
+                <section>
+                    <ul>
+                        <li>__bool__(self)</li>
+                    </ul>
+                    <pre><code class="python" data-code="code/example10.py"></code></pre>
+                </section>
+                <section>
+                    <ul>
+                        <li>__call__(self[, args...])</li>
+                    </ul>
+                    <pre><code class="python" data-code="code/example11.py"></code></pre>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/externalcode/externalcode.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+
+            hash: true,
+
+            highlight: {
+                beforeHighlight: (e) => console.log(e)
+            },
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, Externalcode, RevealHighlight, RevealNotes]
+        })
+        Reveal.on('fragmentshown', event => {
+            document.querySelectorAll(".fragment-description").forEach(el => {
+                el.setAttribute("style", "display: none");
+            })
+            let fragment = event.fragment;
+            let fragmentDescription = fragment.parentNode.parentNode.querySelector(`.fragment-description[data-fragment-code='${fragment.getAttribute("data-line-numbers")}']`);
+            if (fragmentDescription) {
+                fragmentDescription.setAttribute("style", "display: block")
+            }
+        });
+    </script>
+</body>
+
+</html>
