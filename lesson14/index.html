@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .ide-list span {
+            margin-right: 10px;
+        }
+        
+        .ide-list img {
+            width: 60px;
+        }
+        
+        .ide-list li * {
+            vertical-align: middle;
+        }
+        
+        .fragment-description {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h8>Модуль 1. Синтаксис Python и основные инструменты разработки</h8>
+                    <h3 style="padding-top: 30px;">Занятие 14. Патерны ООП и принципы разработки.</h3>
+                </section>
+                <section>
+                    <h6>План занятия</h6>
+                    <ul>
+                        <li><a href="#/1">YAGNI, KISS, DRY, SOLID.</a></li>
+                        <li><a href="#/2">Архитектурные паттерны</a></li>
+                        <li><a href="#/3">Порождающие паттерны.</a></li>
+                        <li><a href="#/4">Структурные паттерны.</a></li>
+                        <li><a href="#/4">Поведенческие паттерны.</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="1">
+                <section>
+                    <ul>
+                        <li>Для чего нужно знать принципы и паттерны разработки?</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>YAGNI</h2>
+                </section>
+                <section>
+                    <h2>KISS</h2>
+                </section>
+                <section>
+                    <h2>DRY</h2>
+                </section>
+                <section>
+                    <h2>SOLID</h2>
+                    <ul>
+                        <li>S – Принцип единственной ответственности (Single Responsibility Principle)</li>
+                        <li>O – Принцип открытости/закрытости (Open‐Closed Principle)</li>
+                        <li>L – Принцип подстановки Барбары Лисков (Liskov Substitution Principle)</li>
+                        <li>I – Принцип разделения интерфейсов (Interface Segregation Principle)</li>
+                        <li>D – Принцип инверсии зависимостей (Dependency Inversion Principle)</li>
+                    </ul>
+                </section>
+                <section>
+                    <p>SRP</p>
+                    <pre><code class="python" data-code="code/example1.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example2.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example3.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example4.py"></code></pre>
+                </section>
+                <section>
+                    <p>OCP</p>
+                    <pre><code class="python" data-code="code/example4.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example8.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example9.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example10.py"></code></pre>
+                </section>
+                <section>
+                    <p>LSP</p>
+                    <pre><code class="python" data-code="code/example11.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example12.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example13.py"></code></pre>
+                </section>
+                <section>
+                    <p>ISP</p>
+                    <pre><code class="python" data-code="code/example14.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example15.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example16.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example17.py"></code></pre>
+                </section>
+                <section>
+                    <p>DIP</p>
+                    <pre><code class="python" data-code="code/example18.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example19.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example20.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example21.py"></code></pre>
+                </section>
+            </section>
+            <section id="2">
+                <section>
+                    <h2>Порождающие паттерны</h2>
+                </section>
+                <section>
+                    <p>Фабричный метод</p>
+                    <img src="images/factory-method-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Абстрактная фабрика</p>
+                    <img src="images/abstract-factory-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Строитель</p>
+                    <img src="images/builder-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Прототип</p>
+                    <img src="images/prototype-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Одиночка</p>
+                    <img src="images/singleton-mini.png" alt="">
+                </section>
+            </section>
+            <section id="3">
+                <section>
+                    <h2>Структурные</h2>
+                </section>
+                <section>
+                    <p>Адаптер</p>
+                    <img src="images/adapter-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Мост</p>
+                    <img src="images/bridge-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Компановщик</p>
+                    <img src="images/composite-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Декоратор</p>
+                    <img src="images/decorator-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Фасад</p>
+                    <img src="images/facade-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Легковес</p>
+                    <img src="images/flyweight-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Заместитель</p>
+                    <img src="images/proxy-mini.png" alt="">
+                </section>
+            </section>
+            <section id="4">
+                <section>
+                    <h2>Поведенческие</h2>
+                </section>
+                <section>
+                    <p>Цепочка обязанностей</p>
+                    <img src="images/chain-of-responsibility-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Комманда</p>
+                    <img src="images/command-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Итератор</p>
+                    <img src="images/iterator-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Посредник</p>
+                    <img src="images/mediator-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Снимок</p>
+                    <img src="images/memento-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Наблюдатель</p>
+                    <img src="images/observer-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Состояние</p>
+                    <img src="images/state-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Стратегия</p>
+                    <img src="images/strategy-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Шаблонный метод</p>
+                    <img src="images/template-method-mini.png" alt="">
+                </section>
+                <section>
+                    <p>Посетитель</p>
+                    <img src="images/visitor-mini.png" alt="">
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/externalcode/externalcode.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+
+            hash: true,
+
+            highlight: {
+                beforeHighlight: (e) => console.log(e)
+            },
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, Externalcode, RevealHighlight, RevealNotes]
+        })
+        Reveal.on('fragmentshown', event => {
+            document.querySelectorAll(".fragment-description").forEach(el => {
+                el.setAttribute("style", "display: none");
+            })
+            let fragment = event.fragment;
+            let fragmentDescription = fragment.parentNode.parentNode.querySelector(`.fragment-description[data-fragment-code='${fragment.getAttribute("data-line-numbers")}']`);
+            if (fragmentDescription) {
+                fragmentDescription.setAttribute("style", "display: block")
+            }
+        });
+    </script>
+</body>
+
+</html>
