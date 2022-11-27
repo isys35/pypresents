@@ -1,0 +1,7 @@
+os.remove(r"D:\test.txt")
+os.rmdir(r"D:\folder")
+os.removedirs(r"D:\folder\first\second\third")
+os.startfile(r"D:\test.txt")
+os.rename(r"D:\folder", r"D:\catalog")
+os.renames(r"D:\folder\first\second", r"D:\catalog\one\two")
+print(os.listdir(r"D:\folder"))

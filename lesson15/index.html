@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .ide-list span {
+            margin-right: 10px;
+        }
+        
+        .ide-list img {
+            width: 60px;
+        }
+        
+        .ide-list li * {
+            vertical-align: middle;
+        }
+        
+        .fragment-description {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h8>Модуль 1. Синтаксис Python и основные инструменты разработки</h8>
+                    <h3 style="padding-top: 30px;">Занятие 15. Полезные модули</h3>
+                </section>
+                <section>
+                    <h6>План занятия</h6>
+                    <ul>
+                        <li><a href="#/1">Интерпретатор: sys.</a></li>
+                        <li><a href="#/2">Операционная система: os.</a></li>
+                        <li><a href="#/3">Пути ОС: pathlib.</a></li>
+                        <li><a href="#/4">Математические модули: decimal, fractions, math, random.</a></li>
+                        <li><a href="#/5">Классы: dataclasses.</a></li>
+                        <li><a href="#/6">Дата и время: datetime.</a></li>
+                        <li><a href="#/7">Регулярные выражения: re.</a></li>
+                        <li><a href="#/8">Логирование: logging.</a></li>
+                        <li><a href="#/9">Копии: copy, deepcopy.</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="1">
+                <section>
+                    <h2>Интерпретатор</h2>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example1.py"></code></pre>
+                </section>
+                <section>
+                    <ul>
+                        <li>sys.argv</li>
+                        <li>sys.maxsize</li>
+                        <li>sys.path</li>
+                        <li>sys.version</li>
+                        <li>sys.exit</li>
+                        <li>sys.executable</li>
+                    </ul>
+                </section>
+                <section>
+                    <pre><code class="bash" data-code="code/example3.py"></code></pre>
+                    <pre><code class="python" data-code="code/example2.py"></code></pre>
+                    <pre><code class="bash" data-code="code/example4.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example5.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example6.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example7.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example8.py"></code></pre>
+                </section>
+            </section>
+            <section id="2">
+                <section>
+                    <h2>Операционная система</h2>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example9.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example10.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example11.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example12.py"></code></pre>
+                </section>
+            </section>
+            <section id="3">
+                <section>
+                    <h2>Пути ОС</h2>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example13.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example14.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example15.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example16.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example17.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example18.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example19.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example20.py"></code></pre>
+                </section>
+            </section>
+            <section id="4">
+                <section>
+                    <h2>Математические модули</h2>
+                </section>
+                <section>
+                    <h3>Decimal</h3>
+                    <pre><code class="python" data-code="code/example21.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example22.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example23.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example24.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example25.py"></code></pre>
+                </section>
+                <section>
+                    <h3>Fractions</h3>
+                    <pre><code class="python" data-code="code/example26.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example27.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example28.py"></code></pre>
+                </section>
+                <section>
+                    <h3>math</h3>
+                    <ul>
+                        <li>pow(num, power)</li>
+                        <li>sqrt(num)</li>
+                        <li>floor(num)</li>
+                        <li>factorial(num)</li>
+                        <li>degrees(rad)</li>
+                        <li>radians(grad)</li>
+                        <li>cos(rad), sin(rad), tan(rad), acos(rad), asin(rad), atan(rad)</li>
+                        <li>log(n, base), log10(n)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>random</h3>
+                    <ul>
+                        <li>randint</li>
+                        <li>randchoice</li>
+                    </ul>
+                </section>
+            </section>
+            <section id="5">
+                <section>
+                    <h2>dataclasses</h2>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example29.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example30.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example31.py"></code></pre>
+                </section>
+            </section>
+            <section id="6">
+                <section>
+                    <h2>datetime</h2>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example32.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example33.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example34.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example35.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example36.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example37.py"></code></pre>
+                </section>
+            </section>
+            <section id="7">
+                <section>
+                    <h2>re</h2>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example38.py"></code></pre>
+                </section>
+                <section>
+                    <ul>
+                        <li>re.match(pattern, string)</li>
+                        <li>re.search(pattern, string)</li>
+                        <li>re.findall(pattern, string)</li>
+                        <li>re.split(pattern, string, [maxsplit=0])</li>
+                        <li>re.sub(pattern, repl, string)</li>
+                        <li>re.compile(pattern, repl, string)</li>
+                    </ul>
+                </section>
+            </section>
+            <section id="8">
+                <section>
+                    <h2>logging</h2>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example39.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example40.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example41.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/example42.py"></code></pre>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/externalcode/externalcode.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+
+            hash: true,
+
+            highlight: {
+                beforeHighlight: (e) => console.log(e)
+            },
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, Externalcode, RevealHighlight, RevealNotes]
+        })
+        Reveal.on('fragmentshown', event => {
+            document.querySelectorAll(".fragment-description").forEach(el => {
+                el.setAttribute("style", "display: none");
+            })
+            let fragment = event.fragment;
+            let fragmentDescription = fragment.parentNode.parentNode.querySelector(`.fragment-description[data-fragment-code='${fragment.getAttribute("data-line-numbers")}']`);
+            if (fragmentDescription) {
+                fragmentDescription.setAttribute("style", "display: block")
+            }
+        });
+    </script>
+</body>
+
+</html>

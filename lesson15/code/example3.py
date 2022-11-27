@@ -1,0 +1,1 @@
+python test.py Студенты sys MyFreedom
