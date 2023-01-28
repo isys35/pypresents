@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .ide-list span {
+            margin-right: 10px;
+        }
+        
+        .ide-list img {
+            width: 60px;
+        }
+        
+        .ide-list li * {
+            vertical-align: middle;
+        }
+        
+        .fragment-description {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h8>Модуль 1. Синтаксис Python и основные инструменты разработки</h8>
+                    <h3 style="padding-top: 30px;">Занятие 17. Как работает Веб</h3>
+                </section>
+                <section>
+                    <h6>План занятия</h6>
+                    <ul>
+                        <li><a href="#/1">Что происходит, когда пользователь набирает в браузере адрес сайта?</a></li>
+                        <li><a href="#/2">DNS.</a></li>
+                        <li><a href="#/3">TCP/UDP.</a></li>
+                        <li><a href="#/4">HTTP-запросы.</a></li>
+                        <li><a href="#/5">Создание запросов с помощью библиотеки requests.</a></li>
+                        <li><a href="#/6">Знакомство с BeatifulSoup.</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="1">
+                <section>
+                    <p>IP-адрес</p>
+                </section>
+                <section>
+                    <p>DNS</p>
+                </section>
+                <section>
+                    <p>TCP/UDP</p>
+                </section>
+                <section>
+                    <p>HTTP заголовки и методы</p>
+                </section>
+                <section>
+                    <p>Веб-сервер</p>
+                </section>
+            </section>
+            <section id="2">
+                <section>
+                    <img src="images/732.png" alt="">
+                </section>
+            </section>
+            <section id="3">
+                <section>
+                    <img src="images/схема2-2.png" alt="">
+                </section>
+            </section>
+            <section id="4">
+                <section>
+                    <img src="images/image.png" alt="">
+                </section>
+                <section>
+                    <img src="images/image2-1-1525x1079.png" alt="">
+                </section>
+            </section>
+            <section id="5">
+                <section>
+                    <p>requests</p>
+                </section>
+            </section>
+            <section id="5">
+                <section>
+                    <p>BeatifulSoup</p>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/externalcode/externalcode.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+
+            hash: true,
+
+            highlight: {
+                beforeHighlight: (e) => console.log(e)
+            },
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, Externalcode, RevealHighlight, RevealNotes]
+        })
+        Reveal.on('fragmentshown', event => {
+            document.querySelectorAll(".fragment-description").forEach(el => {
+                el.setAttribute("style", "display: none");
+            })
+            let fragment = event.fragment;
+            let fragmentDescription = fragment.parentNode.parentNode.querySelector(`.fragment-description[data-fragment-code='${fragment.getAttribute("data-line-numbers")}']`);
+            if (fragmentDescription) {
+                fragmentDescription.setAttribute("style", "display: block")
+            }
+        });
+    </script>
+</body>
+
+</html>
