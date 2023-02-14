@@ -1,0 +1,1 @@
+INSERT INTO Products VALUES (1, 'Galaxy S9', 'Samsung', 4, 63000)

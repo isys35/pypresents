@@ -1,0 +1,1 @@
+SELECT AVG(Price) AS Average_Price FROM Products;

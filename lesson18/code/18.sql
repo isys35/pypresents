@@ -1,0 +1,2 @@
+ALTER TABLE Customers
+RENAME COLUMN Address TO City;

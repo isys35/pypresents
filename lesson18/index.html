@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .ide-list span {
+            margin-right: 10px;
+        }
+        
+        .ide-list img {
+            width: 60px;
+        }
+        
+        .ide-list li * {
+            vertical-align: middle;
+        }
+        
+        .fragment-description {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h8>Модуль 1. Синтаксис Python и основные инструменты разработки</h8>
+                    <h3 style="padding-top: 30px;">Занятие 18. СУБД. Работа с СУБД</h3>
+                </section>
+                <section>
+                    <h6>План занятия</h6>
+                    <ul>
+                        <li><a href="#/1">Понятие СУБД</a></li>
+                        <li><a href="#/2">Реляционные БД</a></li>
+                        <li><a href="#/3">Документо-ориентированные БД</a></li>
+                        <li><a href="#/4">Основы SQL.</a></li>
+                        <li><a href="#/5">Понятие транзакции. ACID.</a></li>
+                        <li><a href="#/6">Уровни изолированности транзакций.</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="1">
+                <section>
+                    <p>Понятие СУБД</p>
+                </section>
+                <section>
+                    <img src="images/1.png" alt="">
+                </section>
+                <section>
+                    <img src="images/2.png" alt="">
+                </section>
+                <section>
+                    <img src="images/3.png" alt="">
+                </section>
+            </section>
+            <section id="2">
+                <section>
+                    <p>Реляционные БД</p>
+                </section>
+                <section>
+                    <img src="images/4.svg" alt="">
+                </section>
+                <section>
+                    <img src="images/4.svg" alt="">
+                </section>
+                <section>
+                    <img src="images/5.svg" alt="">
+                </section>
+                <section>
+                    <img src="images/6.svg" alt="">
+                </section>
+                <section>
+                    <img src="images/7.svg" alt="">
+                </section>
+                <section>
+                    <p>Базы данных</p>
+                </section>
+                <section>
+                    <p>Таблицы</p>
+                </section>
+                <section>
+                    <p>Столбцы и типы данных</p>
+                </section>
+                <section>
+                    <p>Строки</p>
+                </section>
+                <section>
+                    <p>Первичные ключи</p>
+                </section>
+            </section>
+            <section id="3">
+                <section>
+                    <p>Документо-ориентированные БД</p>
+                </section>
+                <section>
+                    <img src="images/8.svg" alt="">
+                </section>
+                <section>
+                    <img src="images/9.svg" alt="">
+                </section>
+            </section>
+            <section id="4">
+                <section>
+                    <p>Установка БД</p>
+                </section>
+            </section>
+<!--            <pre><code class="python" data-code="code/example4.py"></code></pre>-->
+            <section id="5">
+                <section>
+                    <p>Создание базы данных</p>
+                    <pre><code class="sql" data-code="code/1.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Удаление базы данных</p>
+                    <pre><code class="sql" data-code="code/2.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Создание и удаление таблиц</p>
+                    <pre><code class="sql" data-code="code/3.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/4.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/5.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Изменение таблиц</p>
+                    <pre><code class="sql" data-code="code/6.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/7.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/8.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/9.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/10.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/11.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/12.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/13.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/14.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/15.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/16.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/17.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/18.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/19.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Добавление данных. Команда Insert</p>
+                    <pre><code class="sql" data-code="code/20.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/21.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/22.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/23.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Извлечение данных из таблиц. Инструкция `SELECT`</p>
+                    <pre><code class="sql" data-code="code/24.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/25.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/26.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/27.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Фильтрация данных. Использование предложения `WHERE`.</p>
+                    <pre><code class="sql" data-code="code/28.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Агрегатные функции</p>
+                    <pre><code class="sql" data-code="code/29.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/30.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/31.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Группировка</p>
+                    <pre><code class="sql" data-code="code/32.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/33.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/34.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/35.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/36.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/37.sql"></code></pre>
+                </section>
+            </section>
+            <section id="6">
+                <section>
+                    <p>BeatifulSoup</p>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/externalcode/externalcode.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+
+            hash: true,
+
+            highlight: {
+                beforeHighlight: (e) => console.log(e)
+            },
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, Externalcode, RevealHighlight, RevealNotes]
+        })
+        Reveal.on('fragmentshown', event => {
+            document.querySelectorAll(".fragment-description").forEach(el => {
+                el.setAttribute("style", "display: none");
+            })
+            let fragment = event.fragment;
+            let fragmentDescription = fragment.parentNode.parentNode.querySelector(`.fragment-description[data-fragment-code='${fragment.getAttribute("data-line-numbers")}']`);
+            if (fragmentDescription) {
+                fragmentDescription.setAttribute("style", "display: block")
+            }
+        });
+    </script>
+</body>
+
+</html>

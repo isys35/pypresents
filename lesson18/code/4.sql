@@ -1,0 +1,1 @@
+DROP TABLE table1 [, table2, ...];

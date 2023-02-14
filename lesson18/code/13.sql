@@ -1,0 +1,3 @@
+ALTER TABLE Customers
+ALTER COLUMN FirstName
+DROP NOT NULL;
