@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .ide-list span {
+            margin-right: 10px;
+        }
+        
+        .ide-list img {
+            width: 60px;
+        }
+        
+        .ide-list li * {
+            vertical-align: middle;
+        }
+        
+        .fragment-description {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h8>Модуль 1. Синтаксис Python и основные инструменты разработки</h8>
+                    <h3 style="padding-top: 30px;">Занятие 19. Работа с БД с помощью SQLAlchemy</h3>
+                </section>
+                <section>
+                    <h6>План занятия</h6>
+                    <ul>
+                        <li><a href="#/1">Понятие ORM</a></li>
+                        <li><a href="#/2">Создание подключения</a></li>
+                        <li><a href="#/3">Описание моделей и связей</a></li>
+                        <li><a href="#/4">Выполнение запросов в РСУБД с помощью SQLAlchemy</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="1">
+                <section>
+                    <p>Понятие ORM</p>
+                    <p>Object-Relational Mapping</p>
+                </section>
+            </section>
+            <section id="2">
+                <section>
+                    <p>Установка SQLAlchemy</p>
+                    <pre><code class="shell" data-code="code/1.sh"></code></pre>
+                </section>
+                <section>
+                    <p>Установка DBAPI</p>
+                    <pre><code class="shell" data-code="code/2.sh"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="shell">
+                        pip install psycopg2
+                    </code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/3.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/4.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/5.py"></code></pre>
+                </section>
+            </section>
+            <section id="3">
+                <section>
+                    <pre><code class="python" data-code="code/6.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/7.py"></code></pre>
+                </section>
+                <section>
+                    <p>Один-ко-многим</p>
+                    <pre><code class="python" data-code="code/8.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/9.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/10.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/11.py"></code></pre>
+                </section>
+                <section>
+                    <p>Один-к-одному</p>
+                    <pre><code class="python" data-code="code/12.py"></code></pre>
+                </section>
+                <section>
+                    <p>Многие-ко-многим</p>
+                    <pre><code class="python" data-code="code/13.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/14.py"></code></pre>
+                </section>
+                <section>
+                    <p>Создание таблиц</p>
+                    <pre><code class="python">
+                        Base.metadata.create_all(engine)
+                    </code></pre>
+                    <pre><code class="python">
+                        Base.metadata.drop_all(engine)
+                    </code></pre>
+                </section>
+            </section>
+            <section id="4">
+                <section>
+                    <p>Создание сессии</p>
+                    <pre><code class="python" data-code="code/15.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/16.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/17.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/18.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/19.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/20.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/21.py"></code></pre>
+                </section>
+                <section>
+                    <img src="images/1.png" alt="">
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/22.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/23.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/24.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/25.py"></code></pre>
+                </section>
+                <section>
+                    <img src="images/2.png" alt="">
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/26.py"></code></pre>
+                </section>
+            </section>
+            <section id="5">
+                <section>
+                    <p>Создание базы данных</p>
+                    <pre><code class="sql" data-code="code/1.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Удаление базы данных</p>
+                    <pre><code class="sql" data-code="code/2.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Создание и удаление таблиц</p>
+                    <pre><code class="sql" data-code="code/3.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/4.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/5.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Изменение таблиц</p>
+                    <pre><code class="sql" data-code="code/6.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/7.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/8.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/9.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/10.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/11.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/12.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/13.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/14.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/15.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/16.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/17.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/18.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/19.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Добавление данных. Команда Insert</p>
+                    <pre><code class="sql" data-code="code/20.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/21.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/22.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/23.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Извлечение данных из таблиц. Инструкция `SELECT`</p>
+                    <pre><code class="sql" data-code="code/24.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/25.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/26.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/27.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Фильтрация данных. Использование предложения `WHERE`.</p>
+                    <pre><code class="sql" data-code="code/28.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Агрегатные функции</p>
+                    <pre><code class="sql" data-code="code/29.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/30.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/31.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Группировка</p>
+                    <pre><code class="sql" data-code="code/32.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/33.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/34.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/35.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/36.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/37.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Фильтрация групп. HAVING</p>
+                    <pre><code class="sql" data-code="code/38.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/39.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/40.sql"></code></pre>
+                </section>
+                <section>
+                    <p>Внешние ключи и связи</p>
+                </section>
+                <section>
+                    <p>Связь один к одному</p>
+                    <img src="images/10.png" alt="">
+                </section>
+                <section>
+                    <p>Связь один ко многим</p>
+                    <img src="images/11.png" alt="">
+                </section>
+                <section>
+                    <p>Связь многие ко многим</p>
+                    <img src="images/12.png" alt="">
+                </section>
+                <section>
+                    <p>Соединение таблиц</p>
+                    <img src="images/13.png" alt="">
+                </section>
+                <section>
+                    <img src="images/14.jpg" alt="">
+                </section>
+                <section>
+                    <img src="images/15.jpg" alt="">
+                </section>
+                <section>
+                    <img src="images/16.jpg" alt="">
+                </section>
+                <section>
+                    <img src="images/17.jpg" alt="">
+                </section>
+            </section>
+            <section id="6">
+                <section>
+                    <p>Понятие транзакции. ACID</p>
+                </section>
+                <section>
+                    <p>Atomicity или атомарность (A)</p>
+                </section>
+                <section>
+                    <p>Consistency или согласованность (C)</p>
+                </section>
+                <section>
+                    <p>Isolation или изоляция (I)</p>
+                </section>
+                <section>
+                    <p>Durability или Устойчивость (D)</p>
+                </section>
+            </section>
+            <section id="7">
+                <section>
+                    <img src="images/18.png" alt="">
+                </section>
+                <section>
+                    <img src="images/19.png" alt="">
+                </section>
+                <section>
+                    <img src="images/20.png" alt="">
+                </section>
+                <section>
+                    <img src="images/21.png" alt="">
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/externalcode/externalcode.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+
+            hash: true,
+
+            highlight: {
+                beforeHighlight: (e) => console.log(e)
+            },
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, Externalcode, RevealHighlight, RevealNotes]
+        })
+        Reveal.on('fragmentshown', event => {
+            document.querySelectorAll(".fragment-description").forEach(el => {
+                el.setAttribute("style", "display: none");
+            })
+            let fragment = event.fragment;
+            let fragmentDescription = fragment.parentNode.parentNode.querySelector(`.fragment-description[data-fragment-code='${fragment.getAttribute("data-line-numbers")}']`);
+            if (fragmentDescription) {
+                fragmentDescription.setAttribute("style", "display: block")
+            }
+        });
+    </script>
+</body>
+
+</html>
