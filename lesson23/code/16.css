@@ -1,0 +1,9 @@
+// выберет все теги с классом "important"
+.important {
+	 color: red;
+}
+
+// выберет все теги с классом "help"
+.help {
+	 color: green;
+ }
