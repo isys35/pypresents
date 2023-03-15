@@ -1,2 +1,4 @@
-if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates=True)
+from django.http import HttpResponse
+
+def index(request):
+		return HttpResponse("Здесь будет выведен список книг.")

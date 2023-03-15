@@ -39,41 +39,59 @@
         <div class="slides">
             <section>
                 <section>
-                    <h8>Модуль 1. Синтаксис Python и основные инструменты разработки</h8>
-                    <h3 style="padding-top: 30px;">Занятие 22. Телеграм API.</h3>
+                    <h8>Модуль 2. Разработка веб-приложений</h8>
+                    <h3 style="padding-top: 30px;">Занятие 24. Фреймворк Django. Знакомство с фреймворком.</h3>
                 </section>
                 <section>
                     <h6>План занятия</h6>
                     <ul>
-                        <li><a href="#/1">Telegram API.</a></li>
-                        <li><a href="#/2">Библиотеки для работы с АПИ Telegram.</a></li>
+                        <li><a href="#/1">Введение.</a></li>
+                        <li><a href="#/2">Установка. Создание проекта.</a></li>
+                        <li><a href="#/3">MVC(MTV)</a></li>
+                        <li><a href="#/4">Приложения</a></li>
+                        <li><a href="#/5">Контроллеры</a></li>
+                        <li><a href="#/6">Маршруты и маршрутизатор</a></li>
+                        <li><a href="#/7">Модели</a></li>
+                        <li><a href="#/8">Миграции</a></li>
+                        <li><a href="#/9">Django shell</a></li>
+                        <li><a href="#/10">Шаблоны</a></li>
+                        <li><a href="#/11">Админ-панель Django</a></li>
                     </ul>
                 </section>
             </section>
             <section id="1">
                 <section>
-                    <a href="https://core.telegram.org/bots/api#making-requests">Телеграм АПИ</a>
-                </section>
-                <section>
-                    <p>BotFather</p>
-                </section>
-                <section>
-                    <p>https://api.telegram.org/botTOKEN/METHOD_NAME</p>
+                    <p>Введение</p>
                 </section>
             </section>
             <section id="2">
                 <section>
-                    <ul>
-                        <li>aiogram</li>
-                        <li>python-telegram-bot</li>
-                        <li>TeleBot</li>
-                    </ul>
+                    <pre><code class="bash">pip install django</code></pre>
                 </section>
                 <section>
-                    <pre><code class="bash">pip install aiogram</code></pre>
+                    <pre><code class="bash">django-admin startproject samplesite</code></pre>
                 </section>
                 <section>
-                    <pre><code class="python" data-code="code/1.py"></code></pre>
+                    <pre><code class="bash" data-code="code/1.sh"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="bash">python manage.py runserver</code></pre>
+                </section>
+            </section>
+            <section id="3">
+                <section>
+                    <p>M(M)</p>
+                </section>
+                <section>
+                    <p>V(T)</p>
+                </section>
+                <section>
+                    <p>C(V)</p>
+                </section>
+            </section>
+            <section id="4">
+                <section>
+                    <pre><code class="bash">python manage.py startapp books</code></pre>
                 </section>
                 <section>
                     <pre><code class="python" data-code="code/2.py"></code></pre>
@@ -84,8 +102,142 @@
                 <section>
                     <pre><code class="python" data-code="code/4.py"></code></pre>
                 </section>
+            </section>
+            <section id="5">
                 <section>
                     <pre><code class="python" data-code="code/5.py"></code></pre>
+                </section>
+            </section>
+            <section id="6">
+                <section>
+                    <pre><code class="python" data-code="code/6.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/7.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/8.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/9.py"></code></pre>
+                </section>
+            </section>
+            <section id="7">
+                <section>
+                    <pre><code class="python" data-code="code/10.py"></code></pre>
+                </section>
+            </section>
+            <section id="8">
+                <section>
+                    <pre><code class="bash">python manage.py makemigrations books</code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/11.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="bash">python manage.py sqlmigrate books 0001</code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/12.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="bash">python manage.py migrate</code></pre>
+                </section>
+            </section>
+            <section id="9">
+                <section>
+                    <pre><code class="bash">python manage.py shell</code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/11.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="bash">python manage.py sqlmigrate books 0001</code></pre>
+                </section>
+                <section>
+                    <pre><code class="sql" data-code="code/12.sql"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="bash">python manage.py migrate</code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/13.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/14.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/15.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/16.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/17.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/18.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/19.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/20.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/21.py"></code></pre>
+                </section>
+                 <section>
+                    <pre><code class="python" data-code="code/22.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/23.py"></code></pre>
+                </section>
+                 <section>
+                    <pre><code class="python" data-code="code/24.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/25.py"></code></pre>
+                </section>
+            </section>
+            <section id="10">
+                <section>
+                    <pre><code class="html" data-code="code/26.html"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="html" data-code="code/27.html"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="html" data-code="code/28.html"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/29.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/30.py"></code></pre>
+                </section>
+            </section>
+            <section id="11">
+                <section>
+                    <pre><code class="bash">python manage.py createsuperuser</code></pre>
+                </section>
+                <section>
+                    <pre><code class="bash" data-code="code/31.sh"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="bash" data-code="code/32.sh"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python">LANGUAGE_CODE = 'en-us'</code></pre>
+                </section>
+                <section>
+                    <pre><code class="python">LANGUAGE_CODE = 'ru'</code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/33.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/34.py"></code></pre>
                 </section>
             </section>
         </div>
