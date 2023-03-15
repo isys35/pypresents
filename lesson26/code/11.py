@@ -1,0 +1,1 @@
+parent_subject = models.ForeignKey("self", on_delete=models.PROTECT)

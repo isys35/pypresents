@@ -1,0 +1,1 @@
+subject = models.ForeignKey("sybjects.Subject", on_delete=models.PROTECT)
