@@ -1,0 +1,1 @@
+>>> Book.objects.filter(author=OuterRef(OuterRef('pk')))

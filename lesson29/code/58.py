@@ -1,0 +1,1 @@
+>>> Book.objects.annotate(num_authors=Count('authors')).filter(num_authors__gt=1)

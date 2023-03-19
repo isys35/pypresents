@@ -1,0 +1,1 @@
+>>> one_entry = Entry.objects.get(pk=1)

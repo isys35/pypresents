@@ -1,0 +1,1 @@
+>>> Entry.objects.order_by('headline')[0:1].get()

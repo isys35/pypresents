@@ -1,0 +1,1 @@
+WHERE question LIKE 'Who%' OR question LIKE 'What%'

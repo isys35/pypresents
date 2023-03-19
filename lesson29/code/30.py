@@ -1,0 +1,1 @@
+>>> Entry.objects.filter(authors__name=F('blog__name'))

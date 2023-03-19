@@ -1,0 +1,1 @@
+Q(question__startswith='Who') | ~Q(pub_date__year=2005)

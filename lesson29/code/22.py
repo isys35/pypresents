@@ -1,0 +1,1 @@
+>>> Entry.objects.filter(blog__name='Beatles Blog')

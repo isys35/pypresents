@@ -1,0 +1,1 @@
+Entry.objects.order_by('blog__name', 'headline')

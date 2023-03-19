@@ -1,0 +1,1 @@
+>>> Entry.objects.filter(rating__lt=F('number_of_comments') + F('number_of_pingbacks'))

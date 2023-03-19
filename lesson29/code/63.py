@@ -1,0 +1,1 @@
+>>> qs1.union(qs2, qs3)

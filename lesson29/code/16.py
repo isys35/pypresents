@@ -1,0 +1,1 @@
+Entry.objects.latest('pub_date')

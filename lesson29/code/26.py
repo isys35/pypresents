@@ -1,0 +1,1 @@
+Blog.objects.filter(entry__authors__isnull=False, entry__authors__name__isnull=True)

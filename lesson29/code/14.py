@@ -1,0 +1,1 @@
+>>> all_entries = Entry.objects.all()

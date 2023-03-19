@@ -1,0 +1,1 @@
+Q(question__startswith='Who') | Q(question__startswith='What')
