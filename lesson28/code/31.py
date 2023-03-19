@@ -1,0 +1,1 @@
+>>> Entry.objects.filter(blog__id=1).update(comments_on=True)

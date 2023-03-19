@@ -1,0 +1,1 @@
+Entry.objects.filter(id=10).update(comments_on=False)

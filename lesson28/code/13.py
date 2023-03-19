@@ -1,0 +1,1 @@
+Model.delete(using=DEFAULT_DB_ALIAS, keep_parents=False)

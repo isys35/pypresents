@@ -1,0 +1,1 @@
+bulk_update(objs, fields, batch_size=None)

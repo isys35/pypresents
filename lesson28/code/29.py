@@ -1,0 +1,1 @@
+>>> Entry.objects.filter(pub_date__year=2010).update(comments_on=False, headline='This is old')

@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .ide-list span {
+            margin-right: 10px;
+        }
+        
+        .ide-list img {
+            width: 60px;
+        }
+        
+        .ide-list li * {
+            vertical-align: middle;
+        }
+        
+        .fragment-description {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h8>Модуль 2. Разработка веб-приложений</h8>
+                    <h3 style="padding-top: 30px;">Занятие 28. Запись данных. RelatedManager.</h3>
+                </section>
+                <section>
+                    <h6>План занятия</h6>
+                    <ul>
+                        <li><a href="#/1">Создание объектов.</a></li>
+                        <li><a href="#/2">Изменение записей.</a></li>
+                        <li><a href="#/3">Метод save().</a></li>
+                        <li><a href="#/4">Удаление записей.</a></li>
+                        <li><a href="#/5">Обработка связанных записей.</a></li>
+                        <li><a href="#/6">Массовые добавление, правка и удаление записей</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="1">
+                <section>
+                    <pre><code class="python" data-code="code/1.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/2.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/3.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python">get_or_create()</code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/4.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/5.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python">update_or_create()</code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/6.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/7.py"></code></pre>
+                </section>
+            </section>
+            <section id="2">
+                <section>
+                    <pre><code class="python" data-code="code/8.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/9.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/10.py"></code></pre>
+                </section>
+            </section>
+            <section id="3">
+                 <section>
+                    <pre><code class="python" data-code="code/11.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/12.py"></code></pre>
+                </section>
+            </section>
+            <section id="4">
+                <section>
+                    <pre><code class="python" data-code="code/13.py"></code></pre>
+                </section>
+            </section>
+            <section id="5">
+                <section>
+                    <pre><code class="python" data-code="code/14.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/15.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/16.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/17.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/18.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/19.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/20.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/21.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/22.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/23.py"></code></pre>
+                </section>
+            </section>
+            <section id="6">
+                 <section>
+                    <pre><code class="python" data-code="code/24.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/25.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/26.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/27.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/28.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/29.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/30.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/31.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/32.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/33.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/34.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/35.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/36.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/37.py"></code></pre>
+                </section>
+                <section>
+                    <pre><code class="python" data-code="code/38.py"></code></pre>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/externalcode/externalcode.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+
+            hash: true,
+
+            highlight: {
+                beforeHighlight: (e) => console.log(e)
+            },
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, Externalcode, RevealHighlight, RevealNotes]
+        })
+        Reveal.on('fragmentshown', event => {
+            document.querySelectorAll(".fragment-description").forEach(el => {
+                el.setAttribute("style", "display: none");
+            })
+            let fragment = event.fragment;
+            let fragmentDescription = fragment.parentNode.parentNode.querySelector(`.fragment-description[data-fragment-code='${fragment.getAttribute("data-line-numbers")}']`);
+            if (fragmentDescription) {
+                fragmentDescription.setAttribute("style", "display: block")
+            }
+        });
+    </script>
+</body>
+
+</html>
