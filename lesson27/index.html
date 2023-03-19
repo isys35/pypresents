@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <style>
+        .ide-list span {
+            margin-right: 10px;
+        }
+        
+        .ide-list img {
+            width: 60px;
+        }
+        
+        .ide-list li * {
+            vertical-align: middle;
+        }
+        
+        .fragment-description {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h8>Модуль 2. Разработка веб-приложений</h8>
+                    <h3 style="padding-top: 30px;">Занятие 27. Миграции.</h3>
+                </section>
+                <section>
+                    <h6>План занятия</h6>
+                    <ul>
+                        <li><a href="#/1">Генерирование миграций и команды.</a></li>
+                        <li><a href="#/2">Файлы миграции.</a></li>
+                        <li><a href="#/3">Выполнение миграций.</a></li>
+                        <li><a href="#/4">Слияние миграций.</a></li>
+                        <li><a href="#/5">Вывод списка миграций.</a></li>
+                        <li><a href="#/6">Отмена миграций.</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="1">
+                <section>
+                    <pre><code class="bash">python manage.py makemigrations</code></pre>
+                </section>
+                <section>
+                    <pre><code class="bash" data-code="code/1.sh"></code></pre>
+                </section>
+            </section>
+            <section id="2">
+                <section>
+                    <pre><code class="python" data-code="code/2.py"></code></pre>
+                </section>
+            </section>
+            <section id="3">
+                 <section>
+                    <pre><code class="bash">python manage.py migrate [app_label] [migration_name]</code></pre>
+                </section>
+            </section>
+            <section id="4">
+                <section>
+                    <pre><code class="bash">python manage.py squashmigrations [app_label] [migration_name]</code></pre>
+                </section>
+            </section>
+            <section id="5">
+                <section>
+                    <pre><code class="bash">python manage.py showmigrations [app_label [app_label ...]]</code></pre>
+                </section>
+            </section>
+            <section id="6">
+                 <section>
+                    <pre><code class="bash">python manage.py migrate books 0002</code></pre>
+                </section>
+                <section>
+                    <pre><code class="bash">python manage.py migrate books zero</code></pre>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/externalcode/externalcode.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+
+            hash: true,
+
+            highlight: {
+                beforeHighlight: (e) => console.log(e)
+            },
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, Externalcode, RevealHighlight, RevealNotes]
+        })
+        Reveal.on('fragmentshown', event => {
+            document.querySelectorAll(".fragment-description").forEach(el => {
+                el.setAttribute("style", "display: none");
+            })
+            let fragment = event.fragment;
+            let fragmentDescription = fragment.parentNode.parentNode.querySelector(`.fragment-description[data-fragment-code='${fragment.getAttribute("data-line-numbers")}']`);
+            if (fragmentDescription) {
+                fragmentDescription.setAttribute("style", "display: block")
+            }
+        });
+    </script>
+</body>
+
+</html>
