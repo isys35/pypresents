@@ -1,0 +1,1 @@
+formset = RubricFormSet(request.POST, queryset=Rubric.objects.all()[0:5])

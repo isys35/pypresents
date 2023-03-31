@@ -1,0 +1,1 @@
+let formNum = birdForm.length-1 // Get the number of the last form on the page with zero-based indexing
