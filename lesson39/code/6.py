@@ -1,0 +1,4 @@
+MIDDLEWARE =  [
+		...
+		"bboard.middlewares.RubricsMiddleware",
+]
