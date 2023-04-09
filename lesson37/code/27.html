@@ -1,0 +1,5 @@
+{% if 'foo' in perms %}
+    {% if 'foo.add_vote' in perms %}
+        <p>In lookup works, too.</p>
+    {% endif %}
+{% endif %}
