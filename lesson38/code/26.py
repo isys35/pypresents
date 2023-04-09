@@ -1,0 +1,1 @@
+GenericRelation(<вторичная модель>[, content_type_field='content_type'],[, object_id_field='object_id'][, for_concrete_model=True][, related_query_name=None])

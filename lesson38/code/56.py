@@ -1,0 +1,3 @@
+class Rubric(models.Model):
+		...
+		objects = models.Manager.form_queryset(RubricQuerySet)()

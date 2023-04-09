@@ -1,0 +1,1 @@
+rs = Rubric.objects.all().order_by_bb_count()

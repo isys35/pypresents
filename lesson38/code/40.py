@@ -1,0 +1,3 @@
+class Rubric(models.Model):
+		...
+		objects = RubricManager()

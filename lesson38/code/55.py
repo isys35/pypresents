@@ -1,0 +1,3 @@
+class Rubric(models.Model):
+		...
+		objects = RubricQuerySet.as_manager()

@@ -1,0 +1,1 @@
+>>> non_prefetched = qs.prefetch_related(None)

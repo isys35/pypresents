@@ -1,0 +1,1 @@
+>>> Restaurant.objects.select_related('best_pizza').prefetch_related('best_pizza__toppings')

@@ -1,0 +1,1 @@
+>>> without_relations = queryset.select_related(None)

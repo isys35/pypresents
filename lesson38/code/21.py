@@ -1,0 +1,1 @@
+GenericForeignКey([ct_field='content_type'][,][fk_field='object_id'][,][for_concrete_model=True])

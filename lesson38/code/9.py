@@ -1,0 +1,1 @@
+>>> Pizza.objects.prefetch_related('toppings')
