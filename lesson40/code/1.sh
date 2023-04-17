@@ -1,0 +1,1 @@
+manage.py check --deploy

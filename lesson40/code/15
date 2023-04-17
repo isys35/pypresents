@@ -1,0 +1,11 @@
+$ tree
+.
+├── blog
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── manage.py
+
+1 directory, 6 files

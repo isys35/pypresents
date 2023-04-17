@@ -1,0 +1,1 @@
+gunicorn --workers=4 blog.wsgi:application
