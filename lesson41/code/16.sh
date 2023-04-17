@@ -1,0 +1,1 @@
+docker exec -it <id или имя контейнера> bash

@@ -1,0 +1,1 @@
+docker run -v ${PWD}:/usr/share/nginx/html nginx

@@ -1,0 +1,1 @@
+docker inspect <id или имя контейнера>
